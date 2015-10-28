@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 
 
-public class MainActivity extends AppCompatActivity implements ViewTreeObserver.OnPreDrawListener {
+public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
@@ -49,11 +49,6 @@ public class MainActivity extends AppCompatActivity implements ViewTreeObserver.
                 recyclerView.getAdapter().notifyItemRemoved(0);
             }
         }, 500);
-    }
-
-    @Override
-    public boolean onPreDraw() {
-        return false;
     }
 
     public static class Holder extends RecyclerView.ViewHolder implements ViewTreeObserver.OnPreDrawListener {
